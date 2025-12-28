@@ -15,7 +15,7 @@ I work on [projects](#projects) involving robotics, defense tech, and cyber secu
 
 ## Projects
 - **High-Altitude Balloon:** Arduino-based telemetry and sensors  
-- **Autonomous Underwater Robot:** Underwater communication and LiFi research  
+- WIP  
 - WIP
 
 ## Contact
