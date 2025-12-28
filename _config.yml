@@ -23,8 +23,7 @@
 # =======================
 title: Madison Hasley
 email: er.mhasley@gmail.com
-description: >-
-  Mechanical Engineering & CS Portfolio | Projects in defense, robotics, and advanced technologies.
+description: Mechanical Engineering & CS Portfolio | Projects in defense, robotics, and advanced technologies.
 baseurl: "" # leave empty if deploying to root
 url: "https://mhasley.github.io"
 
