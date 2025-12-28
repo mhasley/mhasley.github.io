@@ -20,12 +20,12 @@
 
 title: Madison Hasley
 email: er.mhasley@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-"Mechanical Engineering & CS Portfolio | Projects in defense, robotics, and advanced technologies."
+description: >-
+  "Mechanical Engineering & CS Portfolio | Projects in defense, robotics, and advanced technologies."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mhasley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 LinkedIn_username: mhasley
-github_username:  mhasley
+github_username: mhasley
 
 # Build settings
 theme: minima
