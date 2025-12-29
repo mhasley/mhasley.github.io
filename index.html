@@ -4,7 +4,7 @@ layout: default
 <div class="container">
 	<div class="row">
 	{% if paginator.posts.size > 0 %}
-		{%- for post in site.posts -%}
+		{%- for post in paginator.posts -%}
 		{% if forloop.index <= 1 %}
 		<div class="col col-12">
 			<article class="article-first">
