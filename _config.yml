@@ -40,7 +40,11 @@ plugins:
   - jekyll-archives    
   - jekyll-seo-tag     # improves SEO for a portfolio
   - jekyll-sitemap     # optional sitemap for search engines
-  # add more plugins if needed
+  - jekyll-paginate
+
+# Pagination
+paginate: 4
+paginate_path: "/projects/page:num/"
 
 # =======================
 # Exclusions
