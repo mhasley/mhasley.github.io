@@ -47,6 +47,7 @@ plugins:
 # =======================
 include:
   - _pages
+  - _posts
 exclude:
   - Gemfile
   - Gemfile.lock
