@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Project Name 1"
-date: mm-dd-yyyy - mm-dd-yyyy
+date: 2025-12-29 16:02:00 +0300
 tags: [featured] 
 image: 
 description: "One-line summary: what the project is and why it matters."
