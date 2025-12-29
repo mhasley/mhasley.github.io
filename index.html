@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="container">
 	<div class="row">
-	{% if site.posts.size > 0 %}
+	{% if paginator.posts.size > 0 %}
 		{%- for post in site.posts -%}
 		{% if forloop.index <= 1 %}
 		<div class="col col-12">
@@ -35,7 +35,7 @@ layout: default
 	<div class="row">
 		<div class="col col-12 col-t-8">
 			<div class="row">
-			{%- for post in site.posts offset: 1 -%}
+			{%- for post in paginator.posts offset: 1 -%}
 				<article class="article col col-12 col-t-6">
 					<div class="article-box">
 						<div class="article-head">
