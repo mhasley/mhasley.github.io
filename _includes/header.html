@@ -15,7 +15,7 @@
 
               <!-- Other pages -->
               {% for page in site.pages %}
-                {% unless page.name == 'tags.html' or page.name == '404.html' or page.name == 'index.html' %}
+                {% unless page.name == 'tags.html' or page.name == '404.html' %}
                   {% if page.title %}
                     <li class="menu-item">
                       <a href="{{ page.url | prepend: site.baseurl }}" class="menu-link">{{ page.title }}</a>
