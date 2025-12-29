@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About-2
+title: Works
 image: 08.jpg
-permalink: /about-2/
+permalink: /Works/
 ---
 
 Hi! I'm Madison, a Mechanical Engineering & Computer Science Student at UNC Charlotte.  
