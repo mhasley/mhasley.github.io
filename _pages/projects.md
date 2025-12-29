@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Projects
+permalink: /projects/
 ---
+
 <div class="container">
   <div class="row">
-    {% assign featured_posts = site.posts | where_exp:"post","post.tags contains 'featured'" %}
-    {% for post in featured_posts %}
+    {% assign all_posts = site.posts %}
+    {% for post in all_posts %}
       {% if forloop.index == 1 %}
       <div class="col col-12">
         <article class="article-first">
