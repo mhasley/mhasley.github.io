@@ -34,8 +34,8 @@ layout: default
     <!-- Main content -->
     <div class="col col-12 col-t-8">
       <div class="row">
-        {% assign other_posts = site.posts | offset: 1 %}
-        {% for post in other_posts %}
+        {% assign other_featured_posts = featured_posts | offset: 1 %}
+        {% for post in other_featured_posts %}
           <div class="col col-12 col-t-6">
             <article class="article-box">
               <div class="article-head">
