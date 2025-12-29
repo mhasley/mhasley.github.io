@@ -6,51 +6,54 @@ permalink: /projects/
 
 <div class="container">
   <div class="row">
-    {% for post in paginator.posts %}
-      {% if forloop.index == 1 %}
-      <!-- Featured post -->
-      <div class="col col-12">
-        <article class="article-first">
-          <div class="article-image-first" style="background-image: url({{ "/img/" | prepend: site.baseurl | append: post.image }})">
-            <div class="article-content-first">
-              <div class="article-tag">
-                {% for tag in post.tags %}
-                  <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">{{ tag }}</a>
-                {% endfor %}
+    <div class="col col-12 col-t-12">
+      <div class="row">
+        {% for post in paginator.posts %}
+          {% if forloop.index == 1 %}
+          <!-- Featured project -->
+          <div class="col col-12">
+            <article class="article-first">
+              <div class="article-image-first" style="background-image: url({{ "/img/" | prepend: site.baseurl | append: post.image }})">
+                <div class="article-content-first">
+                  <div class="article-tag">
+                    {% for tag in post.tags %}
+                      <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">{{ tag }}</a>
+                    {% endfor %}
+                  </div>
+                  <h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                  <p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 163 }}{% else %}{{ post.content | strip_html | truncate: 163 }}{% endif %}</p>
+                  <a href="{{ post.url | prepend: site.baseurl }}" class="button read-more">Read More</a>
+                </div>
               </div>
-              <h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-              <p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 163 }}{% else %}{{ post.content | strip_html | truncate: 163 }}{% endif %}</p>
-              <a href="{{ post.url | prepend: site.baseurl }}" class="button read-more">Read More</a>
-            </div>
+            </article>
           </div>
-        </article>
-      </div>
-      {% else %}
-      <!-- Regular posts -->
-      <div class="col col-12 col-t-6">
-        <article class="article-box">
-          <div class="article-head">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="article-image" style="background-image: url({{ "/img/" | prepend: site.baseurl | append: post.image }})">
-              <div class="image-overlay"><span class="image-overlay-text">{{ post.title }}</span></div>
-            </a>
-          </div>
-          <div class="article-content">
-            <div class="article-info">
-              <div class="article-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time></div>
-              <div class="article-tag">
-                {% for tag in post.tags %}
-                  <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">{{ tag }}</a>
-                {% endfor %}
+          {% else %}
+          <!-- Regular projects -->
+          <div class="col col-12 col-t-6">
+            <article class="article-box">
+              <div class="article-head">
+                <a href="{{ post.url | prepend: site.baseurl }}" class="article-image" style="background-image: url({{ "/img/" | prepend: site.baseurl | append: post.image }})">
+                  <div class="image-overlay"><span class="image-overlay-text">{{ post.title }}</span></div>
+                </a>
               </div>
-            </div>
-            <h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-            <p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 135 }}{% else %}{{ post.content | strip_html | truncate: 135 }}{% endif %}</p>
+              <div class="article-content">
+                <div class="article-info">
+                  <div class="article-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time></div>
+                  <div class="article-tag">
+                    {% for tag in post.tags %}
+                      <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">{{ tag }}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+                <h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 135 }}{% else %}{{ post.content | strip_html | truncate: 135 }}{% endif %}</p>
+              </div>
+            </article>
           </div>
-        </article>
+          {% endif %}
+        {% endfor %}
       </div>
-      {% endif %}
-    {% endfor %}
+      {% include pagination.html %}
+    </div>
   </div>
-
-  {% include pagination.html %}
 </div>
