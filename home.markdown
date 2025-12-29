@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Works
+title: Resume
 image: 08.jpg
-permalink: /Works/
+permalink: /Resume/
 ---
 
 Hi! I'm Madison, a Mechanical Engineering & Computer Science Student at UNC Charlotte.  
