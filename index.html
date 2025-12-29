@@ -4,11 +4,11 @@ layout: default
 
 <div class="container">
   <div class="row">
-    {% comment %} Featured post (first one) {% endcomment %}
+    {% comment %} Featured posts with image overlay (top 3) {% endcomment %}
     {% assign featured_posts = site.posts | where_exp: "post", "post.tags contains 'featured'" %}
     {% for post in featured_posts %}
-      {% if forloop.index == 1 %}
-      <div class="col col-12">
+      {% if forloop.index <= 3 %}
+      <div class="col col-12 col-t-12">
         <article class="article-first">
           <div class="article-image-first" style="background-image: url({{ "/img/" | prepend: site.baseurl | append: post.image }})">
             <div class="article-content-first">
@@ -18,12 +18,20 @@ layout: default
                 {% endfor %}
               </div>
               <h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-              <p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 163 }}{% else %}{{ post.content | strip_html | truncate: 163 }}{% endif %}</p>
+              <p class="article-excerpt">
+                {% if post.description %}
+                  {{ post.description | strip_html | truncate: 163 }}
+                {% else %}
+                  {{ post.content | strip_html | truncate: 163 }}
+                {% endif %}
+              </p>
               <a href="{{ post.url | prepend: site.baseurl }}" class="button read-more">Read More</a>
             </div>
           </div>
         </article>
       </div>
+      {% else %}
+        {% break %}
       {% endif %}
     {% endfor %}
   </div>
@@ -31,10 +39,10 @@ layout: default
 
 <div class="container">
   <div class="row">
-    <!-- Main content -->
+    <!-- Remaining featured posts in grid style -->
     <div class="col col-12 col-t-8">
       <div class="row">
-        {% assign other_featured_posts = featured_posts | offset: 1 %}
+        {% assign other_featured_posts = featured_posts | offset: 3 %}
         {% for post in other_featured_posts %}
           <div class="col col-12 col-t-6">
             <article class="article-box">
