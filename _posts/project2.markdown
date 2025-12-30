@@ -4,7 +4,6 @@ title: "Project Name 2"
 date: 2025-12-29 16:02:00 +0300
 tags: [featured] 
 image: 11.jpg
-description: "One-line summary: what the project is and why it matters."
 ---
 
 ## Project Overview
