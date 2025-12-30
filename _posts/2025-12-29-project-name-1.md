@@ -3,7 +3,7 @@ layout: post
 title: "Project Name 1"
 date: 2025-12-29 16:02:00 +0300
 tags: [featured] 
-image: 10.jpg
+image: battcave.jpg
 ---
 
 ## Project Overview
