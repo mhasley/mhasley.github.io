@@ -59,7 +59,8 @@ exclude:
   - vendor
   - .jekyll-cache
   - .sass-cache
-  - search.json        
+  - search.json
+  - styleguide.md
 
 # =======================
 # Markdown
