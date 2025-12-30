@@ -60,7 +60,6 @@ exclude:
   - .jekyll-cache
   - .sass-cache
   - search.json
-  - styleguide.md
 
 # =======================
 # Markdown
