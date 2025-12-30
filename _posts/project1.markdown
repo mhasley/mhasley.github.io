@@ -3,7 +3,7 @@ layout: post
 title: "Project Name 1"
 date: 2025-12-29 16:02:00 +0300
 tags: [featured] 
-image: 
+image: 10.jpg
 description: "One-line summary: what the project is and why it matters."
 ---
 
